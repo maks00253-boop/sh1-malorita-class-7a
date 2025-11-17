@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Класс 7А</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header>
+  <div style="display: flex; align-items: center;">
+    <img width="120" height="100" src="img/sm.jpg" alt="Фото СШ" style="transform: translateY(-10px);"/>
+    <h1>Класс 7А</h1>
+  </div>
+  <h1 style="font-size: 20px;">Сайт Класса</h1>
+</header>
+
+
+<!-- Вкладки -->
+<div class="tabs">
+  <button class="tablinks active" onclick="openTab(event, 'Main')">Главная</button>
+  <button class="tablinks" onclick="openTab(event, 'Photos')">Фотографии и Новости</button>
+  <button class="tablinks" onclick="openTab(event, 'Schedule')">Расписание уроков</button>
+  <button class="tablinks" onclick="openTab(event, 'Project')">Проекты класса</button>
+  <button class="tablinks" onclick="openTab(event, 'Help')">Помощь</button>
+</div>
+
+<!-- Контент вкладок -->
+<div id="Main" class="tabcontent">
+  <h2>Информация о классе 7А</h2>
+  <p>В этом классе учится дружный коллектив учеников. У нас интересные уроки и активная школьная жизнь.</p>
+  <p>В классе насчитывается 23 учащихся</p>
+  <div class="photos">
+    <img src="img/photo1.jpg" alt="Фото 1" />
+    <img src="img/photo2.jpg" alt="Фото 2" />
+  </div>
+  <p>На этом сайте много полезной информации!</p>
+  <but class="tablinks" href="http://sch1.malorita.edu.by/ru/main.aspx">Перейти на оригинальный сайт школы</but>
+</div>
+
+<div id="Photos" class="tabcontent" style="display:none;">
+  <h2>Фотографии и Новости</h2>
+  <h3>Новости</h3>
+  <p>Следите за последними новостями нашего класса!</p>
+  <p>Конец Пятницы - Илария Мыш или фавелик</p>
+  <h3>Фотографии</h3>
+  <div class="photos">
+    <img src="img/photo3.jpg" alt="Фото 3" />
+    <img src="img/photo5.jpg" alt="Фото 5" />
+    <img src="img/photo6.jpg" alt="Фото 6" />
+    <img src="img/photo7.jpg" alt="Фото 7" />
+    <img src="img/photo4.jpg" alt="Фото 4" />
+  </div>
+  <p>Хотите чтоб ваше фото было тут? Скидывайте фото в группу класса(сылка на группу класа в вкладке "Помощь")</p>
+</div>
+
+<div id="Schedule" class="tabcontent" style="display:none;">
+  <h2>Расписание уроков</h2>
+  <div class="schedule">
+    <h3>Понедельник</h3>
+    <p>Русский язык, Русская литература, Английский язык(Информатика), Информатика(Английский язык), Математика, Физкультура, Информационный час</p>
+    <h3>Вторник</h3>
+    <p>Математика, Физкультура, Английский язык, Биология, Белоруский язык, Исскуство</p>
+    <h3>Среда</h3>
+    <p>Химия, География, Всемирная история, Биология, Физика, Математика, ОПТ</p>
+    <h3>Четверг</h3>
+    <p>История Беларуси, Математика, Физкультура, Английский язык, Труды, Труды, Час общения</p>
+    <h3>Пятница</h3>
+    <p>Русский язык, Белоруский язык, Белоруская литература, Математика, Физика, Русская литература</p>
+  </div>
+</div>
+<div id="Project" class="tabcontent">
+  <h2>Проекты класса</h2>
+  <div class="section">
+    <p>На данный момент проектов нет</p>
+  </div>
+ </div>
+
+<div id="Help" class="tabcontent">
+  <h2>Помощь</h2>
+  <div class="section">
+    <h3>Чтобы получить помощь вам нужно:</h3>
+  </div>
+  <p>Зайти в группу класса, написать ?/[Текст сообщения]</p>
+  <button class="tablinks" onclick="openTab(event, 'Help2')">Группа класса</button>
+  <p></p>
+  <button class="tablinks" onclick="openTab(event, '34')">Войти в аккаунт разроботчика</button>
+
+  
+</div>
+
+<div id="Help2" class="tabcontent">
+  <h2>Помощь</h2>
+  <div class="section">
+    <h3>В ГРУППУ В ВАЙБЕРЕ ЗАЙДИ И ВСЁ</h3>
+  </div>
+ </div>
+
+ <div id="34" class="tabcontent">
+  <h2>Вход в аккаунт разработчика</h2>
+  <div class="section">
+    <p>Введите пароль для входа:</p>
+    <input type="text" class="text-input-as-button" placeholder="Введите PIN">
+    <p></p>
+    <button class="tablinks" onclick="openTab(event, '34No')">Войти</button>
+  </div>
+ </div>
+</div>
+
+<div id="34No" class="tabcontent">
+  <h2>Вход в аккаунт разработчика</h2>
+  <div class="section">
+    <p>Неверный пароль</p>
+    <p>Не бойся я уже отправил уведомление автору о попытке входа в аккаунт</p>
+  </div>
+ </div>
+
+<script src="script.js"></script>
+</body>
+</html>

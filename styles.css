@@ -1,0 +1,172 @@
+/* Общие стили */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+  background-color: #a7d3ff;
+}
+
+/* Заголовок */
+header h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  font-size: 36px;
+}
+
+/* Вкладки */
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+/* Кнопки вкладок */
+.tablinks {
+  background-color: #2980b9;
+  color: #fff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px; /* Уже закруглённые углы */
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Общие стили для полей, имитирующие кнопки */
+.text-input-as-button {
+  background-color: #2980b9; /* цвет, похожий на .tablinks */
+  color: #fff; /* белый текст для читаемости */
+  padding: 12px 25px; /* такие же отступы, как у кнопки */
+  border: none; /* убираем рамку */
+  border-radius: 25px; /* уже закругленная форма */
+  font-size: 16px; /* соответствующий размер текста */
+  cursor: pointer; /* курсор как у кнопки */
+  transition: background-color 0.3s, transform 0.2s;
+  outline: none; /* убираем синий outline при фокусе */
+}
+
+/* При наведении - цвет чуть меняется */
+.text-input-as-button:hover {
+  background-color: #3498db;
+  transform: scale(1.05);
+}
+
+/* При фокусе - эффект (опционально) */
+.text-input-as-button:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+.tablinks:hover {
+  background-color: #3498db;
+  transform: scale(1.05);
+}
+
+.tablinks.active {
+  background-color: #1abc9c;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Контент вкладок */
+.tabcontent {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 25px; /* Теперь углы также закруглены максимально */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  max-width: 900px;
+  margin: 0 auto;
+  transition: opacity 0.3s;
+  animation: fadeEffect 0.5s;
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/* Заголовки */
+h2 {
+  color: #3b5e81;
+  margin-bottom: 15px;
+}
+
+h3 {
+  color: #2c3e50;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* Фото и расписание */
+.photos {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.photos img {
+  width: 200px;
+  height: auto;
+  border-radius: 15px; /* Закругление углов фоток по желанию */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Эффект при наведении на фото */
+.photos img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* Расписание */
+.schedule {
+  line-height: 1.6;
+  margin-top: 15px;
+}
+
+/* --- Медиа-запросы для мобильных --- */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  header h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  /* Вкладки — располагать вертикально */
+  .tabs {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  /* Кнопки вкладок — растянуть на всю ширину */
+  .tablinks {
+    padding: 14px;
+    font-size: 16px;
+    width: 100%; /* полностью растягиваются */
+    max-width: none;
+  }
+
+  /* Фото масштабир :) Convert
+  .photos {
+    justify-content: center;
+  }
+
+  .photos img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Контент — оставить максимально закруглённым */
+  .tabcontent {
+    padding: 15px;
+    border-radius: 25px; /* максимальное закругление для мобильных */
+  }
+}
